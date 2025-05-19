@@ -18,6 +18,9 @@ Synthesis requires three files as follows,
 
 ◦ Verilog/VHDL Files (.v or .vhdl or .vhd)
 
+Program :
+
+
 ### Step 2 : Performing Synthesis
 
 The Liberty files are present in the library path,
@@ -36,10 +39,21 @@ used.
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
 
 #### Synthesis RTL Schematic :
+![Screenshot (18)](https://github.com/user-attachments/assets/6e495b6a-81b9-4f9d-980d-1abb5cca3319)
 
 #### Area report:
+![Screenshot (20)](https://github.com/user-attachments/assets/3ff77101-3dca-40f6-8755-a4f364b247e7)
 
 #### Power Report:
+![Screenshot (22)](https://github.com/user-attachments/assets/ba3bc2ce-9f2c-4fb0-81ad-6dcce4dee113)
+
+#### Gates report:
+![Screenshot (21)](https://github.com/user-attachments/assets/37eaf0ee-bb76-49cc-a0dd-3352bf656bcd)
+
+#### Timing report:
+![Screenshot (23)](https://github.com/user-attachments/assets/1a07cef3-a65c-4d5c-a8de-ac6d456cd2d5)
+
+
 
 #### Result: 
 
