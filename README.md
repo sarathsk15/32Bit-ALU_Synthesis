@@ -20,6 +20,78 @@ Synthesis requires three files as follows,
 
 Program :
 
+ALU.V
+
+module alu_32bit_case(y,a,b,f);
+
+input [31:0]a;
+
+input [31:0]b;
+
+input [2:0]f;
+
+output reg [31:0]y;
+
+always@(*)
+
+begin
+
+case(f)
+
+3'b000:y=a&b; //AND Operation
+
+3'b001:y=a|b; //OR Operation
+
+3'b010:y=~(a&b); //NAND Operation
+
+3'b011:y=~(a|b); //NOR Operation
+
+3'b100:y=a^b; //XOR Operation
+
+3'b101:y=~(a^b); //XNOR Operation
+
+3'b110:y=~a; //NOT of a
+
+3'b111:y=~b; //NOT of b
+
+endcase
+
+end
+
+endmodule
+
+ALU.TCL
+
+read_libs /cadence/install/FOUNDRY-01/digital/90nm/dig/lib/slow.lib
+
+read_hdl alu_32bit.v
+
+elaborate
+
+read_sdc input_constraints.sdc 
+
+syn_generic
+
+report_area
+
+syn_map
+
+report_area
+
+syn_opt
+
+report_area 
+
+
+report_area > alu_32bit_area.txt
+
+report_area > alu_32bit_area.txt
+
+report_power > alu_32bit_power.txt
+
+write_hdl > alu_32bit_netlist.v
+gui_show
+
 
 ### Step 2 : Performing Synthesis
 
